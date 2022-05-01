@@ -34,3 +34,9 @@ There are a total of 2 doctors.
 There are a total of 2 singers.
 There are a total of 3 actors.
 There are a total of 3 professors.
+
+solution:
+
+SELECT NAME +'('+LEFT(OCCUPATION,1)+')' FROM OCCUPATIONS order by name asc;
+
+SELECT 'There are a total of '+rtrim(cast(count(occupation) as char))+' '+lower(Occupation)+'s.' from OCCUPATIONS group by OCCUPATION order by count(name) asc,occupation asc
